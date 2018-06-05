@@ -37,7 +37,9 @@
 
         <div class="row">
             <main role="main" class="col-sm-12 ml-sm-auto col-md-12 pt-3">
+
                 <div id="comment-form" class="col-sm-8 col-md-offset-2" style="margin-top: 20px;">
+                    <h2 style="margin-top: 1%;">Add Suggestion</h2><br>
                     {{ Form::open(['route' => ['comments.store', $post->id], 'method' => 'POST' ]) }}
 
                         <div class="row">
