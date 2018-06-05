@@ -30,3 +30,8 @@ Route::post('/user/post/edit/{id}', 'HomeController@updatePost')->name('post.upd
 Route::get('/user/post/delete/{id}', 'HomeController@deletePost')->name('post.delete');
 
 Route::get('/admin/post/detail/{id}', 'AdminController@getPostadmin')->name('adminpost.detail');
+
+//comments
+
+Route::post('comments/{post_id}',['uses' => 'CommentsController@store', 'as' => 'comments.store']);
+Route::post('admin/comments/{post_id}',['uses' => 'AdminCommentsController@store', 'as' => 'admincomments.store']);
